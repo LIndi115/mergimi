@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="sq" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUTO DETAILING MERGIMI | Masterclass 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;400;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/@scrollreveal/scrollreveal"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #050505; color: white; cursor: none; }
+        .font-brand { font-family: 'Syncopate', sans-serif; }
+        
+        /* Custom Cursor */
+        #cursor { width: 20px; height: 20px; border: 2px solid #3b82f6; border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; transition: transform 0.1s ease; }
+        #cursor-blur { width: 200px; height: 200px; background: rgba(59, 130, 246, 0.15); filter: blur(80px); position: fixed; pointer-events: none; z-index: 9998; border-radius: 50%; }
+
+        /* Hero Background with Parallax */
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(5,5,5,1)), 
+                        url('https://images.unsplash.com/photo-1607860108855-64acf2078ed9?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Logo Animation */
+        @keyframes shine {
+            0% { background-position: -100px; }
+            40%, 100% { background-position: 140px; }
+        }
+        .animate-shine {
+            background: linear-gradient(90deg, #3b82f6 0%, #ffffff 50%, #3b82f6 100%);
+            background-size: 200px;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 3s infinite linear;
+        }
+
+        .glass-header { background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.05); }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div id="cursor"></div>
+    <div id="cursor-blur"></div>
+
+    <header class="fixed w-full z-50 glass-header py-5 px-6 md:px-16 flex justify-between items-center">
+        <div class="flex items-center">
+            <h1 class="text-xl md:text-3xl font-brand font-bold tracking-tighter italic uppercase">
+                AUTO DETAILING <span class="animate-shine ml-2">MERGIMI</span>
+            </h1>
+        </div>
+        
+        <div class="hidden md:flex items-center gap-12 font-bold text-[10px] uppercase tracking-[0.3em]">
+            <a href="#home" class="hover:text-blue-500 transition-colors">Ballina</a>
+            <a href="#services" class="hover:text-blue-500 transition-colors">Shërbimet</a>
+            <a href="#gallery" class="hover:text-blue-500 transition-colors">Galeria</a>
+            <a href="tel:+38344111222" class="bg-blue-600 px-8 py-3.5 rounded-full hover:bg-blue-400 transition-all shadow-xl shadow-blue-600/20">
+                REZERVO TANI
+            </a>
+        </div>
+    </header>
+
+    <section id="home" class="hero-bg h-screen flex items-center justify-center relative pt-20">
+        <div class="max-w-7xl mx-auto text-center px-4 relative z-10">
+            <div class="reveal">
+                <span class="bg-white/5 backdrop-blur-md border border-white/10 text-blue-400 px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-[0.4em] mb-10 inline-block">
+                    Standardi i ri i pastrimit
+                </span>
+            </div>
+            
+            <h1 class="reveal text-7xl md:text-[140px] font-black leading-[0.85] uppercase tracking-tighter mb-8">
+                ART NË <br> 
+                <span class="text-transparent bg-clip-text bg-gradient-to-b from-blue-400 to-blue-700">DETAJE.</span>
+            </h1>
+            
+            <p class="reveal text-gray-400 text-lg md:text-2xl max-w-3xl mx-auto mb-14 font-light italic leading-relaxed px-4">
+                Ne nuk thjesht lajmë makina. Ne restaurojmë pasionin tuaj përmes pastrimit me avull dhe mbrojtjes nanoteknologjike.
+            </p>
+            
+            <div class="reveal flex flex-wrap justify-center gap-6">
+                <a href="#services" class="px-14 py-6 bg-white text-black font-black rounded-2xl hover:bg-blue-600 hover:text-white transition-all transform hover:scale-105 shadow-2xl shadow-white/10">
+                    SHIKO SHËRBIMET
+                </a>
+                <a href="https://wa.me/38344111222" class="px-14 py-6 border-2 border-white/10 backdrop-blur-xl font-black rounded-2xl hover:border-blue-500 transition-all flex items-center gap-3">
+                    <i data-lucide="message-circle" class="w-5 h-5"></i> WHATSAPP
+                </a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 w-full px-6 opacity-20 hidden md:block">
+            <div class="max-w-7xl mx-auto flex justify-between items-center text-[10px] font-bold tracking-[0.5em] uppercase">
+                <span>MEGUIAR'S</span>
+                <span>SONAX</span>
+                <span>KOCH CHEMIE</span>
+                <span>RUPES</span>
+                <span>GEYON</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 border-y border-white/5 bg-[#050505]">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 text-center">
+            <div class="reveal"><div class="text-5xl font-black mb-2">15k+</div><div class="text-blue-500 text-[10px] font-bold tracking-widest uppercase">Veturave të Detajuara</div></div>
+            <div class="reveal"><div class="text-5xl font-black mb-2">100%</div><div class="text-blue-500 text-[10px] font-bold tracking-widest uppercase">Bio-Produkte</div></div>
+            <div class="reveal"><div class="text-5xl font-black mb-2">24h</div><div class="text-blue-500 text-[10px] font-bold tracking-widest uppercase">Garancion Shkëlqimi</div></div>
+            <div class="reveal"><div class="text-5xl font-black mb-2">5★</div><div class="text-blue-500 text-[10px] font-bold tracking-widest uppercase">Vlerësime nga Klientët</div></div>
+        </div>
+    </section>
+
+    <script>
+        // Icons
+        lucide.createIcons();
+
+        // Cursor Logic
+        const cursor = document.getElementById('cursor');
+        const blur = document.getElementById('cursor-blur');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+            blur.style.left = e.clientX - 100 + 'px';
+            blur.style.top = e.clientY - 100 + 'px';
+        });
+
+        // Scroll Reveal
+        ScrollReveal().reveal('.reveal', {
+            distance: '50px',
+            duration: 1000,
+            easing: 'cubic-bezier(0.5, 0, 0, 1)',
+            interval: 100,
+            origin: 'bottom'
+        });
+    </script>
+</body>
+</html>
